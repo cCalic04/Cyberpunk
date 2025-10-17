@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+  background-image: radial-gradient(
+    rgba(1, 55, 1, 0.75), black 120%
+  );
+  height: 100vh;
+    color: rgb(13, 255, 0);
+  font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+  font-style: normal;
+    text-shadow: 0 0 5px #17ff7c;
+    overflow-x: hidden;
+
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(black, 0.15),
+    rgba(black, 0.15) 2px,
+    transparent 2px,
+    transparent 2px
+  );
+}
+
+
+::selection {
+  background: #0080FF;
+  text-shadow: none;
+}
+
+p{
+max-width: 25vw;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(13, 255, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(13, 255, 0); }
+}
+
+.bulletsContenedor{
+display: flex;
+flex-direction: row;
+margin: 2%;
+}
+.bullets2{
+    margin-left: 2%;
+    max-width: 25vw;
+}
+.bullets3{
+    margin-left: 2%;
+    max-width: 25vw;
+}
