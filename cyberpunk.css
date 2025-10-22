@@ -13,6 +13,8 @@ body {
 
 }
 
+
+
 body::after {
   content: "";
   position: absolute;
@@ -22,10 +24,10 @@ body::after {
   height: 100vh;
   background: repeating-linear-gradient(
     0deg,
-    rgba(black, 0.15),
-    rgba(black, 0.15) 2px,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 2px,
     transparent 2px,
-    transparent 2px
+    transparent 4px
   );
 }
 
@@ -60,7 +62,7 @@ max-width: 25vw;
   50% { border-color: rgb(13, 255, 0); }
 }
 
-.bulletsContenedor{
+.bulletsContenedor, .bulletsContenedor2{
 display: flex;
 flex-direction: row;
 margin: 2%;
@@ -72,4 +74,68 @@ margin: 2%;
 .bullets3{
     margin-left: 2%;
     max-width: 25vw;
+}
+.bullets4{
+  max-width: 60vw;
+}
+.pBullets4{
+  max-width: 60vw;
+}
+
+.tele{
+max-width: 30vw;
+max-height: 30vh;
+  background-color: #000;
+  animation-name: fondo;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.imgs{
+max-width: 30vw;
+max-height: 50vh;
+-webkit-filter: drop-shadow(2px 2px 0 black)
+                    drop-shadow(-2px 2px 0 black)
+                    drop-shadow(2px -2px 0 black)
+                    drop-shadow(-2px -2px 0 black);
+
+    filter: drop-shadow(2px 2px 0 black)
+            drop-shadow(-2px 2px 0 black)
+            drop-shadow(2px -2px 0 black)
+            drop-shadow(-2px -2px 0 black);
+
+}
+
+.imgs1{
+max-width: 50vw;
+max-height: 60vh;
+-webkit-filter: drop-shadow(0.5px 0.5px 0 rgb(13, 255, 0))
+                    drop-shadow(-0.5px 0.5px 0 rgb(13, 255, 0))
+                    drop-shadow(0.5px -0.5px 0 rgb(13, 255, 0))
+                    drop-shadow(-0.5px -0.5px 0 rgb(13, 255, 0));
+
+    filter: drop-shadow(0.5px 0.5px 0 rgb(13, 255, 0))
+            drop-shadow(-0.5px 0.5px 0 rgb(13, 255, 0))
+            drop-shadow(0.5px -0.5px 0 rgb(13, 255, 0))
+            drop-shadow(-0.5px -0.5px 0 rgb(13, 255, 0));
+
+}
+
+.millos{
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fondo{
+
+  0% {background-image: radial-gradient(
+    rgba(1, 55, 1, 0.75), black 120%
+  );}
+  50%   {background-image: radial-gradient(
+    rgb(13, 255, 2), black 120%
+  );}
+  100% {background-image: radial-gradient(
+    rgba(1, 55, 1, 0.75), black 120%
+  );}
+
 }
